@@ -59,8 +59,9 @@ pip show python-lsp-server
 ```
 然后找到你使用的python.exe的位置，替换到这个地方
 ```elisp
-(setq lsp-pylsp-server-command 
-       '("d:/Program Files/python3.13.4-64bit/python" "-m" "pylsp"))
+(add-to-list 'eglot-server-programs
+               '(python-mode . ("d:/Program Files/python3.13.4-64bit/python"
+				"-m" "pylsp")))
 ```
 原配置自动关掉了一些无意义warning
 

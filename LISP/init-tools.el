@@ -1,34 +1,21 @@
 ;; -*- lexical-binding: t -*-
 
 ;;c/c++
+;;eglot cc & python
 (use-package eglot
   :ensure nil
-  :hook               ; 自动挂钩到特定模式
-  ((c-mode . eglot-ensure)
-   (c++-mode . eglot-ensure))
+  :hook              
+  (c-mode . eglot-ensure)
+  (c++-mode . eglot-ensure)
+  (python-mode . eglot-ensure)
+  (python-mode . pyvenv-mode)
   :config             ; 包加载后的配置
   (add-to-list 'eglot-server-programs
-	       '((c++-mode c-mode) ("wsl" "clangd"))))
-;;python
-(use-package lsp-mode
-  :ensure t
-  :init
-  (setq lsp-pylsp-server-command 
-        '("d:/Program Files/python3.13.4-64bit/python" "-m" "pylsp"))
-  :config
-  (setq lsp-pylsp-python-executable-cmd "python");在不同虚拟环境识别不同python
-  (add-hook 'python-mode-hook 'pyvenv-mode)
-  ;; 配置pylsp，禁用行内字数检查
-  (setq lsp-pylsp-plugins-pycodestyle-max-line-length nil)
-  (setq lsp-pylsp-plugins-flake8-max-line-length nil)
+	       '((c++-mode c-mode) ("wsl" "clangd")))
   
-  ;; 或者更彻底地禁用相关插件
-  (setq lsp-pylsp-plugins-pycodestyle-enabled nil)
-  (setq lsp-pylsp-plugins-flake8-enabled nil)
-  
-  ;; 如果使用的是pylint，也可以禁用它
-  (setq lsp-pylsp-plugins-pylint-enabled nil)
-  :hook (python-mode . lsp))
+  (add-to-list 'eglot-server-programs
+               '(python-mode . ("d:/Program Files/python3.13.4-64bit/python"
+				"-m" "pylsp"))))
 
 ;;cl
 (use-package slime
@@ -91,7 +78,7 @@
   (setq dashboard-projects-backend 'project-el)
   (setq dashboard-bookmarks-item-format "%s")
   (setq dashboard-items '((projects . 5)
-			  (recents   . 5)
+			  (recents   . 7)
 			  (bookmarks . 3)))
   (setq dashboard-set-init-info t)
   (setq dashboard-center-content t)
