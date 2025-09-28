@@ -12,8 +12,8 @@
  '(menu-bar-mode nil)
  '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")))
  '(package-selected-packages
-   '(cfrs company consult dashboard dired-sidebar dired-subtree embark
-	  highlight-indentation ht magit marginalia pdf-tools
+   '(cfrs company consult dashboard dired-sidebar dired-subtree eglot
+	  embark highlight-indentation ht magit marginalia pdf-tools
 	  projectile python-mode pyvenv s slime undo-tree yasnippet))
  '(tool-bar-mode nil))
 
