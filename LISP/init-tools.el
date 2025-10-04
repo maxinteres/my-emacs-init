@@ -11,7 +11,7 @@
   (python-mode . pyvenv-mode)
   :config             ; 包加载后的配置
   (add-to-list 'eglot-server-programs
-	       '((c++-mode c-mode) . ("wsl" "clangd")))
+	       '((c++-mode c-mode) . ("clangd")))
   
   (add-to-list 'eglot-server-programs
                '(python-mode . ("d:/Program Files/python3.13.4-64bit/python"
