@@ -16,6 +16,6 @@
 (global-set-key (kbd "C-c i s") 'insert-src)
 (global-set-key (kbd "C-c i e") 'insert-empty)
 (with-eval-after-load 'hideshow
-  (define-key hs-minor-mode-map (kbd "C-<tab>") 'fold-switch))
+  (define-key hs-minor-mode-map (kbd "C-<tab>") 'hs-toggle-hiding))
 
 (provide 'init-keybindings)

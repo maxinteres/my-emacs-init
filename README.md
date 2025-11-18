@@ -57,11 +57,10 @@ pip install python-lsp-server[all]
 ```bash
 pip show python-lsp-server
 ```
-然后找到你使用的python.exe的位置，替换到这个地方
+注意每个python虚拟环境中都要安装pylsp，代码如下：
 ```elisp
 (add-to-list 'eglot-server-programs
-               '(python-mode . ("d:/Program Files/python3.13.4-64bit/python"
-				"-m" "pylsp")))
+               '(python-mode . ("python" "-m" "pylsp")))
 ```
 原配置自动关掉了一些无意义warning
 

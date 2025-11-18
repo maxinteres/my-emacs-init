@@ -14,8 +14,7 @@
 	       '((c++-mode c-mode) . ("clangd")))
   
   (add-to-list 'eglot-server-programs
-               '(python-mode . ("d:/Program Files/python3.13.4-64bit/python"
-				"-m" "pylsp"))))
+               '(python-mode . ("python" "-m" "pylsp"))))
 
 ;;cl
 (use-package slime
