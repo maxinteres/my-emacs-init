@@ -25,14 +25,15 @@
     (newline)))
 
 (defun ask-to-open-todo ()
-  (cd "~/") 
+  (cd "~/")
+  (yorn-auto-n 10.0)
   (if (y-or-n-p "open todo-list?")
       (run-with-delay 1
        (find-file "~/todo.org"))
     (message nil)))
 
-(defun atot-auto-close ()
-  (run-with-delay 10.0
+(defun yorn-auto-n (time)
+  (run-with-delay time
    (let ((original-buffer (current-buffer)))
      (run-with-delay 0.01 (switch-to-buffer original-buffer))
      (switch-to-minibuffer)
