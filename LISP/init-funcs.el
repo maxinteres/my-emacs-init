@@ -1,5 +1,23 @@
 ;; -*- lexical-binding: t -*-
 ;; 快速打开配置文件
+(defmacro run-with-delay (time &rest body)
+  `(run-with-timer ,time nil
+    (lambda ()
+      (progn   
+        ,@body))))
+
+(defmacro run-with-idle-delay (time &rest body)
+  `(run-with-idle-timer ,time nil
+    (lambda ()
+      (progn   
+        ,@body))))
+
+(defmacro run-with-idle-repeat (time &rest body)
+  `(run-with-idle-timer ,time t
+    (lambda ()
+      (progn   
+        ,@body))))
+
 (defun insert-empty (times)
   "Insert 10 empty lines in default condition."
   (interactive (list (read-number "number of empty lines:" 10)))
@@ -7,14 +25,18 @@
     (newline)))
 
 (defun ask-to-open-todo ()
+  (cd "~/") 
   (if (y-or-n-p "open todo-list?")
-      (run-with-idle-timer
-       1 nil
-       (lambda ()
-	 (progn
-	   (cd "~/.emacs.d/") 
-	   (find-file "~/todo.org")))))
-  (message nil))
+      (run-with-delay 1
+       (find-file "~/todo.org"))
+    (message nil)))
+
+(defun atot-auto-close ()
+  (run-with-delay 10.0
+   (let ((original-buffer (current-buffer)))
+     (run-with-delay 0.01 (switch-to-buffer original-buffer))
+     (switch-to-minibuffer)
+     (y-or-n-p-insert-n))))
 
 (defun dashboard-restart-emacs-buttom ()
   (insert "\n  ")
@@ -22,9 +44,10 @@
                  'action (lambda (&rest _) (restart-emacs))
 		 'face 'custom-button))
 
-(defun add-startup-without-opening-file-hook (symbol)
-  (when (< (length command-line-args) 2) ;; Assume no file name passed)
-    (add-hook 'emacs-startup-hook symbol)))
+(defun add-startup-without-opening-file-hook (&rest symbols)
+  (when (< (length command-line-args) 2) ;; Assume no file name passed
+    (dolist (symbol symbols)
+      (add-hook 'emacs-startup-hook symbol))))
 
 (defun where-am-i ()
   (interactive)

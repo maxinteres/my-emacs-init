@@ -1,7 +1,7 @@
 ;; -*- lexical-binding: t -*-
 (setq-default line-spacing 0.1)
 
-(add-startup-without-opening-file-hook 'ask-to-open-todo)
+(add-startup-without-opening-file-hook 'ask-to-open-todo 'atot-auto-close)
 
 (setq use-dialog-box nil)      
 (setq use-short-answers t)     
