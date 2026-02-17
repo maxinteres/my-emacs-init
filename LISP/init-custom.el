@@ -10,7 +10,8 @@
  '(global-display-line-numbers-mode t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")) t)
+ '(org-pretty-entities t)
+ '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")))
  '(package-selected-packages
    '(cfrs company consult dashboard dired-sidebar dired-subtree eglot
 	  embark highlight-indentation ht magit marginalia pdf-tools

@@ -34,10 +34,11 @@
 
 (defun yorn-auto-n (time)
   (run-with-delay time
-   (let ((original-buffer (current-buffer)))
-     (run-with-delay 0.01 (switch-to-buffer original-buffer))
-     (switch-to-minibuffer)
-     (y-or-n-p-insert-n))))
+		  (let ((original-buffer (current-buffer)))
+		    (if (not (minibufferp original-buffer))
+			(run-with-delay 0.01 (switch-to-buffer original-buffer)))
+		    (switch-to-minibuffer)
+		    (y-or-n-p-insert-n))))
 
 (defun dashboard-restart-emacs-buttom ()
   (insert "\n  ")
