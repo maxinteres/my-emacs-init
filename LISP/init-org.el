@@ -4,6 +4,7 @@
 
 (setq org-startup-folded t)
 (setq org-todo-keywords '((sequence "TODO(t)" "WAIT(w)" "BUG(g)" "TRY(y)" "SUS(s)""|" "FIXED(f)" "FAILED(l)" "DONE(d)")))
+
 (setq org-todo-keyword-faces '(("BUG" . "tomato")
 			       ("WAIT" . "cornflower blue")
 			       ("TRY" . "royal blue")
@@ -17,5 +18,21 @@
   (when (looking-at "#+BEGIN_SRC");looking-at:当前行以"..."开头？
     (end-of-line)
     (insert " ")))
+
+(defun insert-right-arrow ()
+  (interactive)
+  (insert "\\rightarrow"))
+
+(defun insert-left-arrow ()
+  (interactive)
+  (insert "\\leftarrow"))
+
+(defun insert-up-arrow ()
+  (interactive)
+  (insert "\\uparrow"))
+
+(defun insert-down-arrow ()
+  (interactive)
+  (insert "\\downarrow"))
     
 (provide 'init-org)

@@ -15,6 +15,15 @@
 
 (global-set-key (kbd "C-c i s") 'insert-src)
 (global-set-key (kbd "C-c i e") 'insert-empty)
+(global-set-key (kbd "C-c i <left>") 'insert-left-arrow)
+(global-set-key (kbd "C-c i <right>") 'insert-right-arrow)
+(global-set-key (kbd "C-c i <up>") 'insert-up-arrow)
+(global-set-key (kbd "C-c i <down>") 'insert-down-arrow)
+
+(global-set-key (kbd "C-c M t") 'tex-mode)
+(global-set-key (kbd "C-c M o") 'org-mode)
+
+
 (with-eval-after-load 'hideshow
   (define-key hs-minor-mode-map (kbd "C-<tab>") 'hs-toggle-hiding))
 
