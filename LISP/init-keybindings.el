@@ -3,8 +3,8 @@
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-x x r") 'rename-visited-file)
 
-(global-set-key (kbd "C-~") 'scratch-buffer)
-(global-set-key (kbd "C-`") 'dashboard-open)
+(global-set-key (kbd "C-c ~") 'scratch-buffer)
+(global-set-key (kbd "C-c `") 'dashboard-open)
 (global-set-key (kbd "C-;") 'embark-act)
 
 (global-set-key (kbd "C-c w") 'where-am-i)
@@ -23,8 +23,14 @@
 (global-set-key (kbd "C-c M t") 'tex-mode)
 (global-set-key (kbd "C-c M o") 'org-mode)
 
+;(windmove-default-keybindings)  ;the default is shift
+(global-set-key (kbd "C-c <left>") 'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <down>") 'windmove-down)
+(global-set-key (kbd "C-c <up>") 'windmove-up)
 
-(with-eval-after-load 'hideshow
-  (define-key hs-minor-mode-map (kbd "C-<tab>") 'hs-toggle-hiding))
+(add-hook 'hs-minor-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c \\") 'hs-toggle-hiding)))
 
 (provide 'init-keybindings)

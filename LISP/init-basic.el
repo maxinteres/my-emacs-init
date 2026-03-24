@@ -6,7 +6,7 @@
 (setq use-dialog-box nil)      
 (setq use-short-answers t)     
 
-(global-hl-line-mode 1);;所在行高亮
+;;(global-hl-line-mode 1);;所在行高亮
 
 (setq inhibit-startup-message t)  ; 禁用启动消息
 
@@ -24,7 +24,6 @@
 
 (icomplete-vertical-mode t);minibuffer提示
 
-(windmove-default-keybindings 'meta)  ; 使用 meta+方向键进行窗口间移动
 (setq windmove-wrap-around t)
 
 (add-hook 'find-file-hook 'read-only-mode);所有文件打开先只读

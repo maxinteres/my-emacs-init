@@ -11,7 +11,6 @@
 
 (add-to-list 'default-frame-alist '(width . 150))
 (add-to-list 'default-frame-alist '(height . 45))
-(add-to-list 'default-frame-alist '(font . "Hack-9"))
 (add-to-list 'initial-frame-alist '(width . 150))
 (add-to-list 'initial-frame-alist '(height . 45))
-(add-to-list 'initial-frame-alist '(font . "Hack-9"))
+

@@ -117,5 +117,11 @@
   (pdf-loader-install)
   (add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1))))
 
+;;theme
+(use-package zenburn-theme
+  :ensure t
+  :init
+  (load-theme 'zenburn t))
+
 (provide 'init-tools)
 
