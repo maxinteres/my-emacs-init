@@ -27,10 +27,8 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(org-pretty-entities t)
- '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")) t)
- '(package-selected-packages
-   '(company dashboard dired-sidebar magit marginalia pdf-tools
-	     projectile slime undo-tree zenburn-theme))
+ '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")))
+ '(package-selected-packages nil)
  '(tool-bar-mode nil))
 
 (custom-set-faces

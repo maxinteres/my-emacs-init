@@ -5,6 +5,13 @@
 ;; 界面以及光标设置
 (setq custom-file "~/.emacs.d/LISP/init-custom.el")
 (load custom-file)
+;;font-set if graphic
+(when (display-graphic-p)
+  (dolist (charset '(kana han cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font) charset
+                      (font-spec :family "微软雅黑" :size 15)))
+  (add-to-list 'initial-frame-alist '(font . "Hack-9"))
+  (add-to-list 'default-frame-alist '(font . "Hack-9")))
 ;;
 (require 'init-funcs) 
 ;;基础设置
@@ -18,9 +25,4 @@
 ;;org
 (require 'init-org)
 
-(when (display-graphic-p)
-  (dolist (charset '(kana han cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "微软雅黑" :size 15)))
-  (add-to-list 'initial-frame-alist '(font . "Hack-9"))
-  (add-to-list 'default-frame-alist '(font . "Hack-9")))
+

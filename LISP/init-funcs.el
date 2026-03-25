@@ -24,22 +24,6 @@
   (cl-dotimes (- times)
     (newline)))
 
-(defun ask-to-open-todo ()
-  (cd "~/")
-  (yorn-auto-n 10.0)
-  (if (y-or-n-p "open todo-list?")
-      (run-with-delay 1
-       (find-file "~/todo.org"))
-    (message nil)))
-
-(defun yorn-auto-n (time)
-  (run-with-delay time
-		  (let ((original-buffer (current-buffer)))
-		    (if (not (minibufferp original-buffer))
-			(run-with-delay 0.01 (switch-to-buffer original-buffer)))
-		    (switch-to-minibuffer)
-		    (y-or-n-p-insert-n))))
-
 (defun dashboard-restart-emacs-buttom ()
   (insert "\n  ")
   (insert-button "REBOOT"
