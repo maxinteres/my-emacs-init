@@ -7,9 +7,6 @@
 (load custom-file)
 ;;font-set if graphic
 (when (display-graphic-p)
-  (dolist (charset '(kana han cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "微软雅黑" :size 15)))
   (add-to-list 'initial-frame-alist '(font . "Hack-9"))
   (add-to-list 'default-frame-alist '(font . "Hack-9")))
 ;;
