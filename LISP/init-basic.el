@@ -4,15 +4,11 @@
 (setq use-dialog-box nil)      
 (setq use-short-answers t)     
 
-;;(global-hl-line-mode 1);;所在行高亮
-
 (setq inhibit-startup-message t)  ; 禁用启动消息
 
 (setq initial-scratch-message nil) ; 清空*scratch*缓冲区初始内容
 
 (setq inhibit-startup-screen t);关闭欢迎界面
-
-(setq-default cursor-type 'bar);鼠标设置
 
 (setq tab-always-indent 'complete)
 

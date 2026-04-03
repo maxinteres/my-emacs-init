@@ -33,4 +33,8 @@
 	  (lambda ()
 	    (local-set-key (kbd "C-c \\") 'hs-toggle-hiding)))
 
+(add-hook 'flymake-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c ?") 'flymake-show-diagnostics-buffer)))
+
 (provide 'init-keybindings)
