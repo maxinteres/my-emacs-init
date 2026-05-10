@@ -8,7 +8,8 @@
  '(backup-directory-alist nil)
  '(custom-enabled-themes '(zenburn))
  '(custom-safe-themes
-   '("18a1d83b4e16993189749494d75e6adb0e15452c80c431aca4a867bcc8890ca9"
+   '("f654d73d7a0761cc4f7d99fffe4b16fce1b2d95844f37bc786e455cec744ac75"
+     "18a1d83b4e16993189749494d75e6adb0e15452c80c431aca4a867bcc8890ca9"
      "5aedf993c7220cbbe66a410334239521d8ba91e1815f6ebde59cecc2355d7757"
      "75b371fce3c9e6b1482ba10c883e2fb813f2cc1c88be0b8a1099773eb78a7176"
      "96f69937feec9ec89b879f19ea38c65ee0f85f418b41212bf8e5c75f9ca82bb6"
@@ -27,7 +28,7 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(org-pretty-entities t)
- '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")))
+ '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")) t)
  '(package-selected-packages nil)
  '(tool-bar-mode nil))
 

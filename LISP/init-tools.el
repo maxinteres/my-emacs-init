@@ -46,7 +46,7 @@
   :hook (after-init . marginalia-mode));C-h v/f时，显示各个变量/函数的详细信息
 
 ;;markdown
-(setq markdown-command "D:/home/pandoc-3.7.0.2/pandoc.exe")
+;;(setq markdown-command "D:/home/pandoc-3.7.0.2/pandoc.exe")
 
 ;;项目文件夹边栏
 (use-package dired-subtree
