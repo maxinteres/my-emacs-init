@@ -57,10 +57,6 @@
   :after prog-mode 
   :bind (("C-c d" . dired-sidebar-toggle-sidebar)))
 
-;;magit
-(use-package magit
-  :ensure t)
-
 ;;开始界面设置
 (defcustom dashboard-banner-logo-title "Welcome to Emacs! "
   "Specify the startup banner."
@@ -93,6 +89,12 @@
 	  dashboard-insert-newline
 	  dashboard-insert-footer
 	  )))
+
+;; xclip
+(use-package xclip			;
+  :ensure t
+  :config
+  (xclip-mode 1))
 
 ;;projectile
 (setq projectile-dir "~/proj/")

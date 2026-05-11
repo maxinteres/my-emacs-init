@@ -13,12 +13,10 @@
 (require 'init-funcs) 
 ;;基础设置
 (require 'init-basic)
+;;keybindings
+(require 'init-keybindings)
 ;;all-tools
 (require 'init-tools)
-;;dired设置
-(require 'init-dired)
-;;快捷键
-(require 'init-keybindings)
 ;;org
 (require 'init-org)
 

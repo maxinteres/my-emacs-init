@@ -2,8 +2,10 @@
 下载后直接复制到"~/.emacs.d/"下即可
 
 # requirements 
-## markdown配置
-到官网下载pandoc，然后到init-tools.el配置markdown-command变量，指向pandoc.exe
+##xclip
+```bash
+sudo dnf install xclip
+```
 
 ## sbcl配置
 去官网下载sbcl并加入环境变量，之后可以使用slime
@@ -68,16 +70,6 @@ pip show python-lsp-server
 记得下载字体:
 Hack
 微软雅黑
-
-## pdf支持
-主要使用了pdf-tools
-### windows
-在mingw64.exe的命令行中输入
-```bash
-pacman -S mingw-w64-x86_64-emacs-pdf-tools-server
-```
-确保 \msys64\mingw64\bin 中有epdfinfo即可
-然后就可以正常打开pdf了
 
 ## 最后当前配置下依赖的包
 自带：

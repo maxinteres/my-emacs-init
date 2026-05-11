@@ -29,8 +29,7 @@
  '(menu-bar-mode nil)
  '(org-pretty-entities t)
  '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")) t)
- '(package-selected-packages nil)
- '(tool-bar-mode nil))
+ '(package-selected-packages nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
