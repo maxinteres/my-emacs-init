@@ -1,0 +1,17 @@
+git
+emacs
+gcc
+clangd
+fastfetch
+acpi
+sddm
+dwm
+dmenu
+st
+fcitx5 fcitx5-chinese-addons
+firefox
+blueman
+brightnessctl
+alsa-utils
+wine
+try to get nvidia-driver
