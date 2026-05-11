@@ -107,13 +107,6 @@
 (when (package-installed-p 'projectile)
   (setq dashboard-projects-backend 'projectile))
 
-;;pdf支持
-(use-package pdf-tools
-  :ensure t
-  :init
-  (pdf-loader-install)
-  (add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1))))
-
 ;;theme
 (use-package zenburn-theme
   :ensure t
