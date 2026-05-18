@@ -4,14 +4,21 @@ gcc
 clangd
 fastfetch
 acpi
+
 sddm
-dwm
+dwm autostart-patch useless-gap-patch feh /* set background & others */
 dmenu
-st
+st picom 
+
 fcitx5 fcitx5-chinese-addons
 firefox
-blueman
+blueman /* bluetooth */
 brightnessctl
-alsa-utils
+pamixer /* vol */
+tlp
+
+sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+
 wine
 try to get nvidia-driver

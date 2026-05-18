@@ -2,7 +2,7 @@
 (setq-default line-spacing 0.1)
 
 (when (fboundp 'tool-bar-mode)
-   (tool-bar-mode nil))
+   (tool-bar-mode -1))
 
 (setq use-dialog-box nil)      
 (setq use-short-answers t)     
