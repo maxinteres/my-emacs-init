@@ -21,8 +21,6 @@
 
 (icomplete-vertical-mode t);minibuffer提示
 
-(setq windmove-wrap-around t)
-
 (add-hook 'find-file-hook 'read-only-mode);所有文件打开先只读
 (add-hook 'prog-mode-hook 'hs-minor-mode)  ; 对所有编程模式启用
 (add-hook 'hs-minor-mode-hook 'hs-hide-all);初始全部折叠

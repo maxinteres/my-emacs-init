@@ -23,12 +23,6 @@
 (global-set-key (kbd "C-c M t") 'tex-mode)
 (global-set-key (kbd "C-c M o") 'org-mode)
 
-;(windmove-default-keybindings)  ;the default is shift
-(global-set-key (kbd "C-c <left>") 'windmove-left)
-(global-set-key (kbd "C-c <right>") 'windmove-right)
-(global-set-key (kbd "C-c <down>") 'windmove-down)
-(global-set-key (kbd "C-c <up>") 'windmove-up)
-
 (add-hook 'hs-minor-mode-hook
 	  (lambda ()
 	    (local-set-key (kbd "C-c \\") 'hs-toggle-hiding)))
