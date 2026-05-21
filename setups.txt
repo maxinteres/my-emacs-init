@@ -1,21 +1,26 @@
 git
-emacs
 gcc
 clangd
+emacs evil-collection
+xclip
+
 fastfetch
 acpi
 
 sddm
 dwm autostart-patch useless-gap-patch feh /* set background & others */
 dmenu
-st picom 
+st picom
+i3lock 
 
-fcitx5 fcitx5-chinese-addons
-firefox
 blueman /* bluetooth */
 brightnessctl
 pamixer /* vol */
+flameshot
 tlp
+
+fcitx5 fcitx5-chinese-addons
+firefox
 
 sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm

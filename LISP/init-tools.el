@@ -1,6 +1,17 @@
 ;; -*- lexical-binding: t -*-
+(use-package evil
+  :ensure t
+  :init
+  (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-mode 1)
+  (remove-hook 'find-file-hook 'read-only-mode))
 
-;;c/c++
+(add-to-list 'load-path "~/src/evil-collection/") ;;set evil-collection location
+(require 'evil-collection)
+(evil-collection-init)
+
 ;;eglot cc & python
 (use-package eglot
   :ensure nil

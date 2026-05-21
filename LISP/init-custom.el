@@ -29,7 +29,10 @@
  '(menu-bar-mode nil)
  '(org-pretty-entities t)
  '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")) t)
- '(package-selected-packages nil))
+ '(package-selected-packages
+   '(annalist company dashboard dired-sidebar evil evil-collection
+	      marginalia projectile slime undo-tree xclip
+	      zenburn-theme)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
