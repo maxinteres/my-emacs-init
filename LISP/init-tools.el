@@ -8,9 +8,15 @@
   (evil-mode 1)
   (remove-hook 'find-file-hook 'read-only-mode))
 
-(add-to-list 'load-path "~/src/evil-collection/") ;;set evil-collection location
-(require 'evil-collection)
-(evil-collection-init)
+(use-package evil-collection
+  :ensure t
+  :config
+  (evil-collection-init))
+
+(unless (package-installed-p 'evil)
+  (add-to-list 'load-path "~/src/evil-collection/") ;;set evil-collection location
+  (require 'evil-collection)
+  (evil-collection-init))
 
 ;;eglot cc & python
 (use-package eglot
@@ -121,10 +127,10 @@
   (setq dashboard-projects-backend 'projectile))
 
 ;;theme
-(use-package zenburn-theme
+(use-package doom-themes
   :ensure t
-  :init
-  (load-theme 'zenburn t))
+  :config
+  (load-theme 'doom-nord-aurora t))
 
 (provide 'init-tools)
 
