@@ -4,6 +4,8 @@
 (when (fboundp 'tool-bar-mode)
    (tool-bar-mode -1))
 
+(setq warning-minimum-level :emergency)
+
 (setq use-dialog-box nil)      
 (setq use-short-answers t)     
 
