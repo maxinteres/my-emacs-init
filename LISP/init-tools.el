@@ -13,7 +13,7 @@
   :config
   (evil-collection-init))
 
-(unless (package-installed-p 'evil)
+(unless (package-installed-p 'evil-collection)
   (add-to-list 'load-path "~/src/evil-collection/") ;;set evil-collection location
   (require 'evil-collection)
   (evil-collection-init))
