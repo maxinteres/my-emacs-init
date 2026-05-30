@@ -2,21 +2,33 @@ git
 gcc
 clangd
 emacs evil-collection
-xclip
 
 fastfetch
 acpi
 
+x11:
+{
+xclip
 sddm
 dwm autostart-patch useless-gap-patch feh /* set background & others */
 dmenu
 st picom
-i3lock 
+flameshot
+i3lock
+}
+
+wayland:
+{
+wl-clipboard
+sway swaybg swayidle swaylock
+waybar wlr-randr grim slurp
+greetd tuigreet
+https://geek-blogs.com/blog/sway-linux/
+}
 
 blueman /* bluetooth */
 brightnessctl
 pamixer /* vol */
-flameshot
 tlp
 
 fcitx5 fcitx5-chinese-addons
@@ -25,5 +37,8 @@ firefox
 sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 
+flatpak localsend
 wine
+cargo uvconvertor
+
 try to get nvidia-driver
