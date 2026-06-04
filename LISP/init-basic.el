@@ -1,4 +1,7 @@
 ;; -*- lexical-binding: t -*-
+(prefer-coding-system 'gbk)
+(prefer-coding-system 'utf-8) ; coding-system settings
+
 (setq-default line-spacing 0.1)
 
 (when (fboundp 'tool-bar-mode)

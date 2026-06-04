@@ -1,6 +1,7 @@
 git
 gcc
 clangd
+bear
 emacs evil-collection
 
 fastfetch

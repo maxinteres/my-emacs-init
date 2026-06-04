@@ -23,12 +23,8 @@
 (global-set-key (kbd "C-c M t") 'tex-mode)
 (global-set-key (kbd "C-c M o") 'org-mode)
 
-(add-hook 'hs-minor-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c \\") 'hs-toggle-hiding)))
-
 (add-hook 'flymake-mode-hook
 	  (lambda ()
-	    (local-set-key (kbd "C-c ?") 'flymake-show-diagnostics-buffer)))
+	    (local-set-key (kbd "C-c ?") 'flymake-show-buffer-diagnostics)))
 
 (provide 'init-keybindings)

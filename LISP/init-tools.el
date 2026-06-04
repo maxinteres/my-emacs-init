@@ -106,25 +106,12 @@
 	  dashboard-insert-newline
 	  dashboard-insert-footer
 	  )))
-
+(setq dashboard-projects-backend 'project-el)
 ;; xclip
 (use-package xclip			;
   :ensure t
   :config
   (xclip-mode 1))
-
-;;projectile
-(setq projectile-dir "~/proj/")
-(use-package projectile
-  :ensure t
-  :config
-  (add-to-list 'projectile-project-search-path projectile-dir)
-  (projectile-cleanup-known-projects)
-  (projectile-mode t)
-  (add-to-list 'projectile-project-root-files "makefile" ".project")
-  :bind (("C-x p" . projectile-command-map)))
-(when (package-installed-p 'projectile)
-  (setq dashboard-projects-backend 'projectile))
 
 ;;theme
 (use-package doom-themes
