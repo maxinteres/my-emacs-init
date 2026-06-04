@@ -29,10 +29,12 @@
   :config             ; 包加载后的配置
   (add-to-list 'eglot-server-programs
 	       '((c++-mode c-mode) . ("clangd")))
+  (setq eglot-ignored-server-capabilities '(:documentOnTypeFormattingProvider))
   
   (add-to-list 'eglot-server-programs
                '(python-mode . ("python" "-m" "pylsp"))))
 
+(setq-default c-default-style "linux")
 ;;cl
 (use-package slime
   :ensure t

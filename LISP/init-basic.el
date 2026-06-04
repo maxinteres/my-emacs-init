@@ -18,8 +18,6 @@
 
 (setq inhibit-startup-screen t);关闭欢迎界面
 
-(setq tab-always-indent 'complete)
-
 (electric-pair-mode t)
 
 (setq ring-bell-function 'ignore)
