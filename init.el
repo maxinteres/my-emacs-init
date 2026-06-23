@@ -19,4 +19,6 @@
 (require 'init-tools)
 ;;org
 (require 'init-org)
+;;vibe
+(require 'init-external)
 

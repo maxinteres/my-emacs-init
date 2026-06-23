@@ -13,11 +13,6 @@
   :config
   (evil-collection-init))
 
-(unless (package-installed-p 'evil-collection)
-  (add-to-list 'load-path "~/src/evil-collection/") ;;set evil-collection location
-  (require 'evil-collection)
-  (evil-collection-init))
-
 ;;eglot cc & python
 (use-package eglot
   :ensure nil
@@ -109,11 +104,6 @@
 	  dashboard-insert-footer
 	  )))
 (setq dashboard-projects-backend 'project-el)
-;; xclip
-(use-package xclip			;
-  :ensure t
-  :config
-  (xclip-mode 1))
 
 ;;theme
 (use-package doom-themes

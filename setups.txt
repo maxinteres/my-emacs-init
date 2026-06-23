@@ -6,6 +6,7 @@ emacs evil-collection
 
 fastfetch
 acpi
+nmtui
 
 x11:
 {
@@ -21,7 +22,7 @@ i3lock
 wayland:
 {
 wl-clipboard
-sway swaybg swayidle swaylock
+sway swaybg swayidle swaylock swayimg
 waybar wlr-randr grim slurp
 greetd tuigreet
 https://geek-blogs.com/blog/sway-linux/
@@ -34,12 +35,13 @@ tlp
 
 fcitx5 fcitx5-chinese-addons
 firefox
+miniconda aider
 
 sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 
 flatpak localsend
-wine
 cargo uvconvertor
+wine
 
 try to get nvidia-driver
