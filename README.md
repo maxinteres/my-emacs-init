@@ -86,6 +86,10 @@ conda activate aider-py312
 pip install aider-chat
 aider --version
 ```
+最后在.bashrc，设置api
+```bash
+export DEEPSEEK_API_KEY=sk-************************
+```
 ## 字体
 记得下载字体:
 Hack
