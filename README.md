@@ -2,13 +2,23 @@
 下载后直接复制到"~/.emacs.d/"下即可
 
 # requirements 
-##xclip
+## xclip
 ```bash
 sudo dnf install xclip
 ```
-
+或者wayland下
+```bash
+sudo dnf install wl-clipboard
+```
 ## sbcl配置
-去官网下载sbcl并加入环境变量，之后可以使用slime
+官网下载sbcl并加入环境变量，之后可以使用slime
+
+## evil-collection
+在无法正常下载evil-collection时
+```bash
+cd ~/src/
+git clone https://github.com/emacs-evil/evil-collection.git
+```
 
 ## g++/gcc配置
 去 https://www.msys2.org/ 下载msys2
@@ -66,24 +76,17 @@ pip show python-lsp-server
 ```
 原配置自动关掉了一些无意义warning
 
+## conda & aider
+首先到官网下载miniconda
+
+然后创建python3.12环境，安装aider
+```bash
+conda create -n aider-py312 python=3.12
+conda activate aider-py312
+pip install aider-chat
+aider --version
+```
 ## 字体
 记得下载字体:
 Hack
 微软雅黑
-
-## 最后当前配置下依赖的包
-自带：
-eglot
-icompany
-需要下载：
-lsp-mode
-slime
-company
-marginalia
-dired-subtree
-dired-sidebar
-magit
-dashboard
-projectile
-pdf-tools
-undo-tree
