@@ -97,6 +97,6 @@ export DEEPSEEK_API_KEY=sk-************************
 记得下载字体:
 Hack
 ```bash
-dnf install source-foundry-hack-fonts
+dnf install source-foundry-hack-font
 ```
 微软雅黑
