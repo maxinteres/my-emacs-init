@@ -5,10 +5,6 @@
 ;; 界面以及光标设置
 (setq custom-file "~/.emacs.d/LISP/init-custom.el")
 (load custom-file)
-;;font-set if graphic
-(when (display-graphic-p)
-  (add-to-list 'initial-frame-alist '(font . "Hack-9"))
-  (add-to-list 'default-frame-alist '(font . "Hack-9")))
 ;;
 (require 'init-funcs) 
 ;;基础设置

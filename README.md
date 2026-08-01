@@ -1,6 +1,9 @@
 # 如何使用
 下载后直接复制到"~/.emacs.d/"下即可
-
+# fedora下可能的注意事项
+有时可能下载的是emacs-nw没有图形界面选项
+wayland下，需要改为下载emacs-pgtk；
+x11下，需要下载emacs-gtk+x11
 # requirements 
 ## xclip
 ```bash
@@ -93,4 +96,7 @@ export DEEPSEEK_API_KEY=sk-************************
 ## 字体
 记得下载字体:
 Hack
+```bash
+dnf install source-foundry-hack-fonts
+```
 微软雅黑

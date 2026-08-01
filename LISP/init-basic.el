@@ -1,6 +1,12 @@
 ;; -*- lexical-binding: t -*-
 (prefer-coding-system 'gbk)
 (prefer-coding-system 'utf-8) ; coding-system settings
+(setq default-input-method "TeX")
+
+;;font-set if graphic
+(when (display-graphic-p)
+  (add-to-list 'initial-frame-alist '(font . "Hack-13"))
+  (add-to-list 'default-frame-alist '(font . "Hack-13")))
 
 (setq-default line-spacing 0.1)
 

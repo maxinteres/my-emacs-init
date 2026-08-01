@@ -39,9 +39,15 @@ miniconda aider
 
 sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo | \
+sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
 
 flatpak localsend
 cargo uvconvertor
 wine
+podman  ghcr.io/ggml-org/llama.cpp:full-cuda
+        docker.io/mintplexlabs/anythingllm
+	localhost between containers: http://host.containers.internal
 
 try to get nvidia-driver
+nvidia-container-toolkit
