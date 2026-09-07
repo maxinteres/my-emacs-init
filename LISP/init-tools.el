@@ -2,6 +2,7 @@
 (use-package evil
   :ensure t
   :init
+  (setq evil-want-C-w-delete nil)
   (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
   (setq evil-want-keybinding nil)
   :config
@@ -13,10 +14,13 @@
   :config
   (evil-collection-init))
 
-;;eglot cc & python
+;;eglot cc & python & go
+(use-package go-mode
+  :ensure t)
 (use-package eglot
   :ensure nil
   :hook              
+  (go-mode . eglot-ensure)
   (c-mode . eglot-ensure)
   (c++-mode . eglot-ensure)
   (python-mode . eglot-ensure)
@@ -27,7 +31,10 @@
   (setq eglot-ignored-server-capabilities '(:documentOnTypeFormattingProvider))
   
   (add-to-list 'eglot-server-programs
-               '(python-mode . ("python" "-m" "pylsp"))))
+               '(python-mode . ("python" "-m" "pylsp")))
+  
+  (add-to-list 'eglot-server-programs
+	       '(go-mode . ("gopls"))))
 
 (setq-default c-default-style "linux")
 ;;cl

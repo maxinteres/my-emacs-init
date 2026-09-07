@@ -4,6 +4,8 @@
 有时可能下载的是emacs-nw没有图形界面选项
 wayland下，需要改为下载emacs-pgtk；
 x11下，需要下载emacs-gtk+x11
+
+gui下环境变量最好在 ~/.config/environment.d/*.conf 中配置一份
 # requirements 
 ## xclip
 ```bash
@@ -78,7 +80,20 @@ pip show python-lsp-server
                '(python-mode . ("python" "-m" "pylsp")))
 ```
 原配置自动关掉了一些无意义warning
-
+## go配置
+### golang
+```bash
+sudo dnf install golang
+```
+同时将路径加入环境变量，见
+```bash
+go env GOPATH
+```
+一般是 ~/go ，请将 ~/go/bin/ 加入环境变量
+### gopls
+```bash
+go install golang.org/x/tools/gopls@latest
+```
 ## conda & aider
 首先到官网下载miniconda
 

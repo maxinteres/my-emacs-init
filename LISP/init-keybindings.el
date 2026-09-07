@@ -1,10 +1,13 @@
 ;; -*- lexical-binding: t -*
+(global-set-key (kbd "C-w") nil)
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
-(global-set-key (kbd "C-x x r") 'rename-visited-file)
 
-(global-set-key (kbd "C-c ~") 'scratch-buffer)
-(global-set-key (kbd "C-c `") 'dashboard-open)
+(global-set-key (kbd "C-x x r") 'rename-visited-file)
+(global-set-key (kbd "C-x x R") 'recover-this-file)
+
+(global-set-key (kbd "C-c c ~") 'scratch-buffer)
+(global-set-key (kbd "C-c c `") 'dashboard-open)
 (global-set-key (kbd "C-;") 'embark-act)
 
 (global-set-key (kbd "C-c w") 'where-am-i)

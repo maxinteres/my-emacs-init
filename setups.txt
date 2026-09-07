@@ -44,6 +44,8 @@ sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
 
 flatpak localsend
 cargo uvconvertor
+golang
+
 wine
 podman  ghcr.io/ggml-org/llama.cpp:full-cuda
         docker.io/mintplexlabs/anythingllm

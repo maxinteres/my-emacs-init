@@ -19,8 +19,11 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(org-pretty-entities t)
- '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")) t)
- '(package-selected-packages nil))
+ '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")))
+ '(package-selected-packages
+   '(aidermacs company conda dashboard dired-sidebar doom-themes
+	       evil-collection go-mode marginalia slime undo-tree
+	       xclip)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
