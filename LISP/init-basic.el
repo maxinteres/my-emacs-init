@@ -30,9 +30,11 @@
 
 (icomplete-vertical-mode t);minibuffer提示
 
-(add-hook 'find-file-hook 'read-only-mode);所有文件打开先只读
+(add-hook 'find-file-hook 'read-only-mode);which will be removed after evil-mode
 (add-hook 'prog-mode-hook 'hs-minor-mode)  ; 对所有编程模式启用
 (add-hook 'hs-minor-mode-hook 'hs-hide-all);初始全部折叠
+
+(setq auto-save-interval 30)
 
 ;;dired settings
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
@@ -43,8 +45,18 @@
 
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
-					;在dired-mode下打开文件夹不会创建新缓冲区
-					;使用C-o在另一个文件夹打开文件
 
+;;settings for org-mode
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+(add-hook 'org-mode-hook (lambda () (company-mode -1)))
 
+(setq org-startup-folded t)
+(setq org-todo-keywords '((sequence "TODO(t)" "WAIT(w)" "BUG(g)" "TRY(y)" "SUS(s)""|" "FIXED(f)" "FAILED(l)" "DONE(d)")))
+
+(setq org-todo-keyword-faces '(("BUG" . "tomato")
+			       ("WAIT" . "cornflower blue")
+			       ("TRY" . "royal blue")
+			       ("FAILED" . "chocolate")
+			       ("SUS" . "CHOColate")))
+ 
 (provide 'init-basic)

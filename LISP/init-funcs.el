@@ -23,7 +23,31 @@
   (interactive (list (read-number "number of empty lines:" 10)))
   (cl-dotimes (- times)
     (newline)))
+;;for org
+(defun insert-src ()
+  "Insert org-mode source block and prepare for editing."
+  (interactive)
+  (org-insert-structure-template "src")
+  (when (looking-at "#+BEGIN_SRC");looking-at:当前行以"..."开头？
+    (end-of-line)
+    (insert " ")))
 
+(defun insert-right-arrow ()
+  (interactive)
+  (insert "\\rightarrow{}"))
+
+(defun insert-left-arrow ()
+  (interactive)
+  (insert "\\leftarrow{}"))
+
+(defun insert-up-arrow ()
+  (interactive)
+  (insert "\\uparrow{}"))
+
+(defun insert-down-arrow ()
+  (interactive)
+  (insert "\\downarrow{}"))
+ 
 (defun dashboard-restart-emacs-buttom ()
   (insert "\n  ")
   (insert-button "REBOOT"
