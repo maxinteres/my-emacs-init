@@ -53,3 +53,5 @@ podman  ghcr.io/ggml-org/llama.cpp:full-cuda
 
 try to get nvidia-driver
 nvidia-container-toolkit
+
+foliate for epub
