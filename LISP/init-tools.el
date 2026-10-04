@@ -7,7 +7,9 @@
   (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
-  (remove-hook 'find-file-hook 'read-only-mode))
+  (remove-hook 'find-file-hook 'read-only-mode)
+  (define-key evil-normal-state-map (kbd "：") #'evil-ex)
+  (define-key evil-visual-state-map (kbd "：") #'evil-ex))
 
 (use-package evil-collection
   :ensure t

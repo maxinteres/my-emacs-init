@@ -50,8 +50,10 @@ wine
 podman  ghcr.io/ggml-org/llama.cpp:full-cuda
         docker.io/mintplexlabs/anythingllm
 	localhost between containers: http://host.containers.internal
+	ghcr.io/dubyte/dir2opds:latest
 
 try to get nvidia-driver
 nvidia-container-toolkit
 
 foliate for epub
+pandoc
