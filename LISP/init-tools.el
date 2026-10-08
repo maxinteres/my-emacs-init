@@ -119,6 +119,10 @@
   :ensure t
   :config
   (load-theme 'doom-nord-aurora t))
+;; latex in org-mode
+(use-package org-fragtog
+  :ensure t
+  :hook (org-mode . org-fragtog-mode))
 
 (provide 'init-tools)
 

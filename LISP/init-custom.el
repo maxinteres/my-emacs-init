@@ -22,8 +22,8 @@
  '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")))
  '(package-selected-packages
    '(aidermacs company conda dashboard dired-sidebar doom-themes
-	       evil-collection go-mode marginalia slime undo-tree
-	       xclip)))
+	       evil-collection go-mode marginalia org-fragtog slime
+	       undo-tree xclip)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

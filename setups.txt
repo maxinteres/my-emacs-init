@@ -1,7 +1,4 @@
-git
-gcc
-clangd
-bear
+git gcc clangd bear
 emacs evil-collection
 
 fastfetch
@@ -21,9 +18,9 @@ i3lock
 
 wayland:
 {
-wl-clipboard
-sway swaybg swayidle swaylock swayimg
-waybar wlr-randr grim slurp
+wl-clipboard fuzzel
+sway swaybg swayidle swaylock swayimg waybar wlr-randr
+grim slurp /* sreen shot */
 greetd tuigreet
 https://geek-blogs.com/blog/sway-linux/
 }
@@ -46,14 +43,14 @@ flatpak localsend
 cargo uvconvertor
 golang
 
-wine
 podman  ghcr.io/ggml-org/llama.cpp:full-cuda
         docker.io/mintplexlabs/anythingllm
-	localhost between containers: http://host.containers.internal
 	ghcr.io/dubyte/dir2opds:latest
+	localhost between containers: http://host.containers.internal
 
 try to get nvidia-driver
 nvidia-container-toolkit
 
-foliate for epub
-pandoc
+foliate /* for epub */
+pandoc /* make epub */
+texlive-scheme-full dvipng

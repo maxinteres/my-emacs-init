@@ -58,5 +58,6 @@
 			       ("TRY" . "royal blue")
 			       ("FAILED" . "chocolate")
 			       ("SUS" . "CHOColate")))
- 
+(setq org-startup-with-latex-preview t)
+
 (provide 'init-basic)
