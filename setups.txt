@@ -54,3 +54,4 @@ nvidia-container-toolkit
 foliate /* for epub */
 pandoc /* make epub */
 texlive-scheme-full dvipng
+sdcv /* dictionary need stardict */

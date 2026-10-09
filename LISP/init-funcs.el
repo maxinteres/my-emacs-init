@@ -49,6 +49,7 @@
   (insert "\\downarrow{}"))
  
 (defun dashboard-restart-emacs-buttom ()
+  (insert "\n")
   (insert-button "REBOOT"
                  'action (lambda (&rest _) (restart-emacs))
 		 'face 'custom-button))

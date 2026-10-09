@@ -51,7 +51,11 @@
 (add-hook 'org-mode-hook (lambda () (company-mode -1)))
 
 (setq org-startup-folded t)
+(setq org-adapt-indentation t)
 (setq org-todo-keywords '((sequence "TODO(t)" "WAIT(w)" "BUG(g)" "TRY(y)" "SUS(s)""|" "FIXED(f)" "FAILED(l)" "DONE(d)")))
+;; M-<left> Promote
+;; M-<right> Demote
+;; M-<return> new
 
 (setq org-todo-keyword-faces '(("BUG" . "tomato")
 			       ("WAIT" . "cornflower blue")

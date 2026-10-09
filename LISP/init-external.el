@@ -30,4 +30,5 @@
   (aidermacs-args '("--restore-chat-history"))
   (aidermacs-default-chat-mode 'architect)
   (aidermacs-default-model "deepseek"))
+
 (provide 'init-external)
