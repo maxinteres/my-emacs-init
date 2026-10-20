@@ -102,6 +102,7 @@
          (progress-reporter-done progress)))
      (beginning-of-line))))
 
+(defalias 'rep-str 'replace-string)
 
 (add-hook 'python-mode-hook 'py-hide-all)
 
