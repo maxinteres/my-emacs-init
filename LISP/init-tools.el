@@ -8,6 +8,8 @@
   :config
   (evil-mode 1)
   (remove-hook 'find-file-hook 'read-only-mode)
+  (define-key evil-normal-state-map (kbd "？") #'evil-search-backward)
+  (define-key evil-visual-state-map (kbd "？") #'evil-search-backward)
   (define-key evil-normal-state-map (kbd "：") #'evil-ex)
   (define-key evil-visual-state-map (kbd "：") #'evil-ex))
 
