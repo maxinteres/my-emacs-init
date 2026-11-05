@@ -46,7 +46,8 @@ golang
 podman  ghcr.io/ggml-org/llama.cpp:full-cuda
         docker.io/mintplexlabs/anythingllm
 	ghcr.io/dubyte/dir2opds:latest
-	localhost between containers: http://host.containers.internal
+	jellyfin/jellyfin:latest
+	localhost between containers: http://host.containers.internal	
 
 try to get nvidia-driver
 nvidia-container-toolkit
