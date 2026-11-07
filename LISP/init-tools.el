@@ -118,9 +118,11 @@
 
 ;;theme
 (use-package doom-themes
-  :ensure t
-  :config
-  (load-theme 'doom-nord-aurora t))
+  :ensure t)
+(use-package zenburn-theme
+  :ensure t)
+(load-theme 'zenburn t)
+
 ;; latex in org-mode
 (use-package org-fragtog
   :ensure t
