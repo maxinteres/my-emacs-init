@@ -5,8 +5,8 @@
 
 ;;font-set if graphic
 (when (display-graphic-p)
-  (add-to-list 'initial-frame-alist '(font . "Hack-13"))
-  (add-to-list 'default-frame-alist '(font . "Hack-13")))
+  (add-to-list 'initial-frame-alist '(font . "Hack:pixelsize=17"))
+  (add-to-list 'default-frame-alist '(font . "Hack:pixelsize=17")))
 
 (setq-default line-spacing 0.1)
 
