@@ -14,11 +14,11 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(org-pretty-entities t)
- '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")) t)
+ '(org-todo-keyword-faces '(("BUG" . "DeepYellow") ("WAIT" . "brown")))
  '(package-selected-packages
-   '(aidermacs company conda dashboard dired-sidebar doom-themes
-	       zenburn-theme evil-collection go-mode marginalia
-	       org-fragtog slime undo-tree xclip)))
+   '(aidermacs buffer-move company conda dashboard dired-sidebar
+	       doom-themes evil-collection go-mode marginalia
+	       org-fragtog slime undo-tree xclip zenburn-theme)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

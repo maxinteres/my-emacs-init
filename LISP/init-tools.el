@@ -70,6 +70,14 @@
   :ensure t
   :hook (after-init . marginalia-mode));C-h v/f时，显示各个变量/函数的详细信息
 
+;;buffer-move
+(use-package buffer-move
+  :ensure t
+  :bind
+  (("C-s-k" . buf-move-up)
+   ("C-s-j" . buf-move-down)
+   ("C-s-h" . buf-move-left)
+   ("C-s-l" . buf-move-right)))
 ;;项目文件夹边栏
 (use-package dired-subtree
   :ensure t
