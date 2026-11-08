@@ -5,8 +5,8 @@
 
 ;;font-set if graphic
 (when (display-graphic-p)
-  (add-to-list 'initial-frame-alist '(font . "Hack:pixelsize=17"))
-  (add-to-list 'default-frame-alist '(font . "Hack:pixelsize=17")))
+  (add-to-list 'initial-frame-alist `(font . ,(dot-env-get 'FONT "DejaVu Sans Mono-13"))) ; equalent to Hack-13
+  (add-to-list 'default-frame-alist `(font . ,(dot-env-get 'FONT "DejaVu Sans Mono-13"))))
 
 (setq-default line-spacing 0.1)
 
@@ -14,27 +14,21 @@
    (tool-bar-mode -1))
 
 (setq warning-minimum-level :emergency)
-
 (setq use-dialog-box nil)      
 (setq use-short-answers t)     
-
 (setq inhibit-startup-message t)  ; 禁用启动消息
-
 (setq initial-scratch-message nil) ; 清空*scratch*缓冲区初始内容
-
 (setq inhibit-startup-screen t);关闭欢迎界面
+(setq ring-bell-function 'ignore)
+(setq windmove-wrap-around t)
+(setq auto-save-interval 30)
 
 (electric-pair-mode t)
-
-(setq ring-bell-function 'ignore)
-
 (icomplete-vertical-mode t);minibuffer提示
 
 (add-hook 'find-file-hook 'read-only-mode);which will be removed after evil-mode
 (add-hook 'prog-mode-hook 'hs-minor-mode)  ; 对所有编程模式启用
 (add-hook 'hs-minor-mode-hook 'hs-hide-all);初始全部折叠
-
-(setq auto-save-interval 30)
 
 ;;dired settings
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
