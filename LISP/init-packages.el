@@ -27,6 +27,7 @@
 ;;eglot cc & python & go
 (use-package go-mode
   :ensure t)
+(setopt treesit-enabled-modes '(python-ts-mode))
 (use-package eglot
   :ensure nil
   :hook              
